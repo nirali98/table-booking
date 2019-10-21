@@ -1,0 +1,45 @@
+
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
+<html>
+	<head>
+		<title>Login Page</title>
+	</head>
+	<body>
+
+		<h2 align="center">Login Form</h3>
+		<form action="<?php echo base_url();?>index.php/Login_controller/Login_data" method="post">	
+    		<fieldset>
+
+<!-- Form Name -->
+<legend>Login Page</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Email:</label>  
+  <div class="col-md-4">
+  <input id="email" name="email" type="text" placeholder="Enter Email" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="pass">Password:</label>
+  <div class="col-md-4">
+    <input id="pass" name="pass" type="password" placeholder="Enter Password" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary">Login</button>
+  </div>
+</div>
+
+	</fieldset>
+    </form>
+	</body>
+</html>	

@@ -14,7 +14,7 @@ class Restaurant_controller extends CI_Controller{
 		$data['restaurants']=$result;
 		//debug($data);
 
-		view_loader_with_data('layouts/products',$data);
+		view_loader_with_data('layouts/index',$data);
 	}
 
 	public function view_restaurant_details($id)

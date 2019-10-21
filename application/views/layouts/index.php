@@ -1,8 +1,5 @@
-	
-	
-		<!-- PRODUCTS Start
-    ================================================== -->
 
+<?php if(isset($restaurants)){ ?>
 	<section id="products">
 		<div class="container">
 			<div class="row">
@@ -33,3 +30,11 @@
 			</div>	<!-- End of /.row -->
 		</div>	<!-- End of /.container -->
 	</section>	<!-- End of Section -->
+<?php 
+}
+else
+{
+	redirect(base_url().'index.php/Restaurant_controller');
+}
+
+?>
