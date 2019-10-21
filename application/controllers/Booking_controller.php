@@ -13,7 +13,14 @@ class Booking_controller extends CI_Controller
 	public function index()
 	{
 		//debug($_POST);
-		$data['restaurant']=$_POST;
+		if (isset($_POST)) {
+			$data['restaurant']=$_POST;
+		}
+
+		if (isset($_GET['id'])) {
+			$data['restaurant']=$_GET;
+		}
+				
 		$result=$this->Restaurant_table->get_free_restaurant_tables();
 		//debug($result);
 		$data['restaurant_tables']=$result;

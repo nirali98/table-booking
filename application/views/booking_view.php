@@ -1,9 +1,13 @@
+<?php if(!empty($restaurant)){?>
+
+
+
 <form class="form-horizontal" method="post" action="<?=base_url()?>index.php/Booking_controller/book_table">
 <fieldset>
 
-<!-- Form Name -->
+<!-- Form Name 
 <legend>Book Your Table @ <?=$restaurant['restaurant_name']?></legend>
-
+-->
 <input type="hidden" name="restaurant_id" value="<?=$restaurant['id']?>">
 <input type="hidden" name="customer_id" value="1">
 
@@ -57,3 +61,10 @@
 
 </fieldset>
 </form>
+<?php 
+}
+else
+{
+ // redirect(base_url().'index.php/Booking_controller');
+}
+?>

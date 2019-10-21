@@ -54,31 +54,7 @@
 						<p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@sitename.com</span></p>
 					</div>	<!-- End Of /.block -->
 				</div> <!-- End Of Col-md-3 -->
-				<div class="col-md-4">
-					<div class="block">
-						<h4>UPCOMING ITEMS</h4>
-						<div class="media">
-						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="<?=base_url("images/product-item.jpg")?>" alt="...">
-						  	</a>
-						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="<?=base_url("")?>images/product-item.jpg" alt="...">
-						  	</a>
-						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="<?=base_url("images/product-item.jpg")?>" alt="...">
-						  	</a>
-						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="<?=base_url("images/product-item.jpg")?>" alt="...">
-						  	</a>
-						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="<?=base_url("images/product-item.jpg")?>" alt="...">
-						  	</a>
-						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="<?=base_url("images/product-item.jpg")?>" alt="...">
-						  	</a>
-						</div>	<!-- End Of /.media -->
-					</div>	<!-- End Of /.block -->
-				</div> <!-- End Of Col-md-3 -->
+				
 			</div> <!-- End Of /.row -->
 		</div> <!-- End Of /.Container -->
 		
@@ -91,33 +67,6 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<ul class="cash-out pull-left">
-							<li>
-								<a href="#">
-									<img src="<?=base_url("images/American-Express.png")?>" alt="">	
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="<?=base_url("images/PayPal.png")?>" alt="">	
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="<?=base_url("images/Maestro.png")?>" alt="">	
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="<?=base_url("images/Visa.png")?>" alt="">	
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="<?=base_url("images/Visa-Electron.png")?>" alt="">	
-								</a>
-							</li>
-						</ul>
 						<p class="copyright-text pull-right">Food Code @2013 Designed by <a href="http://www.themexpert.com">Themexpert</a> All Rights Reserved</p>
 					</div>	<!-- End Of /.col-md-12 -->	
 				</div>	<!-- End Of /.row -->	

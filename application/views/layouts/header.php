@@ -9,6 +9,7 @@
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 	<!-- Css -->
 	<link rel="stylesheet" href="<?=base_url("/css/nivo-slider.css")?>" type="text/css" />
@@ -35,7 +36,7 @@
 
 <!-- TOP HEADER Start
     ================================================== -->
-	
+<!--	
 	<section id="top">
 		<div class="container">
 			<div class="row">
@@ -143,7 +144,7 @@
 		  	</div>
 		</div>	
 	</section>  <!-- End of /Section -->
-
+-->
 	<!-- LOGO Start
     ================================================== -->
 	

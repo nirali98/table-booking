@@ -1,9 +1,3 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<form method="post" action="<?=base_url()?>index.php/Booking_controller">
 
 <div class="container">    
     <div class="row">
@@ -29,12 +23,9 @@
 
             <hr>
             	<div class="col-sm-5 col-xs-6 tital " >
-            		<input type="hidden" name="id" value="<?=$restaurant->id?>">
-            		<input type="hidden" name="restaurant_name" value="<?=$restaurant->restaurant_name?>">
-            		<input type="hidden" name="address" value="<?=$restaurant->address?>">
-            		<input type="hidden" name="business_id" value="<?=$restaurant->business_id?>">
-            		<input type="hidden" name="city_id" value="<?=$restaurant->city_id?>">
-              		<input type="submit" name="submit" value="Book Tabale" class="btn-primary">
+                    <a href="<?=base_url()?>index.php/Booking_controller?id=<?=$restaurant->id?>">
+                         Book Tabale
+                    </a>
             	</div>
         	</div>
     		</div>
@@ -42,5 +33,3 @@
 	</div>
 
 </div>
-
-</form>

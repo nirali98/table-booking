@@ -5,7 +5,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="products-heading">
-						<h2>NEW PRODUCTS</h2>
+						<h2>All Restaurants</h2>
 					</div>
 				</div>
 			</div>
@@ -22,6 +22,9 @@
 						<p class="price"><?=$restaurant->address?></p>
 						<a class="view-link shutter" href="<?=base_url()?>index.php/Restaurant_controller/view_restaurant_details/<?=$restaurant->id?>">
 							<i class="fa fa-eye" aria-hidden="true"></i>View Details
+						</a>
+						<a class="view-link shutter" href="<?=base_url()?>index.php/Booking_controller?id=<?=$restaurant->id?>">
+							<i class="fa fa-book" aria-hidden="true"></i>Book Now
 						</a>
 					</div>	<!-- End of /.products -->
 				</div>	<!-- End of /.col-md-3 -->

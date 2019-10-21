@@ -1,23 +1,24 @@
 TODO
 
-add <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+###add <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-remove menu items
-remove search bar
-remove cart
-remove new product section
-remove welcome to codeignitor message
-remove up coming items
-remove payment icons on home page footer
+###remove menu items
+###remove search bar
+###remove cart
+###remove new product section
+###remove welcome to codeignitor message
+###remove up coming items
+###remove payment icons on home page footer
 
-Booking_controller gives unable to locate model
+//Booking_controller gives unable to locate model
 
-make Restaurant_controller the default controller
-add button book table on  restaurant card view
+###make Restaurant_controller the default controller
+###add button book table on  restaurant card view
+###book table button does not have to be form submit, change it to link
+
 make date of booking a datepicker input
-change arival time to time picker input (date picker with format just a time)
 
-book table button does not have to be form submit, change it to link
+change arival time to time picker input (date picker with format just a time)
 
 get restaurant table uses status:0, make use of allocation hour
     - hour and meridium select box
