@@ -12,40 +12,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 	public function index()
 	{
-		$this->load->view('Login_View');
+		view_loader('Login_View');
 	}
 	
 	public function Login_data()
 	{	
 					
 			$data = $this->User->LoginData();
+			//debug($data);die();
 			$status="";
-			if($data)
+			if(!empty($data))
 			{
-				foreach($data as $row)
+				$id=$data->id;
+				$email=$data->email;
+				$password=$data->password;
+				$status=$data->is_active;
+				
+				if ($password == $this->input->post('pass'))
 				{
-						$id=$row->id;
-						$email=$row->email;
-						$status=$row->is_active;
-				}
-				if($status=="1")
-				{
-					$data = array('email' => $email , 'id' => $id);
-					$this->session->set_userdata($data);
-					$this->load->view('layouts/index');
-					/*$data = array('email' => $email , 'id' => $id);
-					$this->session->set_userdata($data);*/
+					if ($data->role_id == 1)
+					{
+						$this->session->set_userdata('customer',$email);
+					}
+					if($data->role_id == 2)
+					{
+						$this->session->set_userdata('business',$email);
+					}
+
+					view_loader_with_data('layouts/index',$data);
+					
 				}
 				else
 				{
-					echo "<script>alert('You r Blocked..!!!')</script>";
-					$this->load->view('Login_view');
+					$vars['error']="invalid Password!!";
+					view_loader_with_data('Login_View',$vars);
 				}
+
 			}
 			else
 			{
-				echo "<script>alert('Invalid User..!!!')</script>";
-					$this->load->view('Login_view');
+				$vars['error']="invalid Email!!";
+				view_loader_with_data('Login_View',$vars);
 			}
 	}
 
@@ -54,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$data = ['id', 'email'];
         $this->session->unset_userdata($data);
 
-        $this->load->view('Login_view');
+        view_loader('Login_view');
 	}
 
 }

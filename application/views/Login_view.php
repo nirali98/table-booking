@@ -1,5 +1,14 @@
 
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
+<?php 
+
+if (isset($error)) {
+  echo "<font color='red' size=3>".$error."</font>";
+}
+
+?>
+
+
 <html>
 	<head>
 		<title>Login Page</title>
@@ -17,7 +26,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="email">Email:</label>  
   <div class="col-md-4">
-  <input id="email" name="email" type="text" placeholder="Enter Email" class="form-control input-md" required="">
+  <input id="email" name="email" type="text" placeholder="Enter Email:" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -26,7 +35,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="pass">Password:</label>
   <div class="col-md-4">
-    <input id="pass" name="pass" type="password" placeholder="Enter Password" class="form-control input-md" required="">
+    <input id="pass" name="pass" type="password" placeholder="Enter Password:" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -35,7 +44,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit"></label>
   <div class="col-md-4">
-    <button id="submit" name="submit" class="btn btn-primary">Login</button>
+    <button id="submit" name="submit" class="btn btn-primary">LogIn</button>
   </div>
 </div>
 

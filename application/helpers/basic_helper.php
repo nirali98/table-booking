@@ -19,7 +19,7 @@ if(!function_exists('view_loader')){
     $CI->load->view('layouts/header', $output);
 	$CI->load->view('layouts/nav', $output);
 	//$CI->load->view('layouts/slider', $output);
-	$CI->load->view('layouts/features', $output);
+	//$CI->load->view('layouts/features', $output);
 	//$CI->load->view('layouts/catagories', $output);
 	//$CI->load->view('layouts/products', $output);
 
@@ -40,7 +40,7 @@ if(!function_exists('view_loader_with_data')){
     $CI->load->view('layouts/header', $output);
 	$CI->load->view('layouts/nav', $output);
 	//$CI->load->view('layouts/slider', $output);
-	$CI->load->view('layouts/features', $output);
+	//$CI->load->view('layouts/features', $output);
 	//$CI->load->view('layouts/catagories', $output);
 	//$CI->load->view('layouts/products', $output);
 

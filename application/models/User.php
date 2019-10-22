@@ -8,11 +8,11 @@ class User extends CI_Model
 		$email = $this->input->post('email');
 		$pass = $this->input->post('pass');
 
-		$para = array('email' => $email ,'password' => $pass );
+		$para = array('email' => $email);
 		$data=$this->db->where($para)->select('*')->from('users')->get();
-		if($data)
+		if(isset($data))
 		{
-			return $data->result();
+			return $data->row();
 		}
 	}
 }
