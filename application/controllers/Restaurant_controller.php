@@ -6,6 +6,8 @@ class Restaurant_controller extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->model('Restaurant');
+		$this->load->model('User');
+		$this->load->model('City');
 	}
 
 	public function index()
@@ -20,8 +22,16 @@ class Restaurant_controller extends CI_Controller{
 	public function view_restaurant_details($id)
 	{
 		$result=$this->Restaurant->get_restaurant_by_id($id);
-		//debug($result);
+		$business=$this->User->get_user_by_id($result->business_id);
+		$city=$this->City->get_city_by_id($result->city_id);
+
+		// debug($result);
+		// debug($business);
+		// debug($city);
+
 		$data['restaurant']=$result;
+		$data['business']=$business;
+		$data['city']=$city;
 		view_loader_with_data_simple('view_restaurant_details',$data);
 	}
 

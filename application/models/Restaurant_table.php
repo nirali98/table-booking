@@ -18,6 +18,7 @@ class Restaurant_table extends CI_Model
 	{
 		$query=$this->db->select('*')->from($this->table)->where('status','0')->get();
 		return $query->result();
+		
 	}
 
 	public function get_restaurant_table_by_id($id)

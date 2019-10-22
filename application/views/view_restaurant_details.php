@@ -1,4 +1,6 @@
-
+<?php
+ if(!empty($this->session->userdata('email'))){ 
+?>
 <div class="container">    
     <div class="row">
         <div class="panel panel-default">
@@ -17,8 +19,8 @@
 
             <hr>
             <ul class="container details" >
-            	<li><p><span class="glyphicon glyphicon-user one" style="width:50px;"></span><?=$restaurant->city_id?></p></li>
-            	<li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span><?=$restaurant->business_id?></p></li>
+            	<li><p><span class="glyphicon glyphicon-user one" style="width:50px;"></span>At <?=$city->city_name?></p></li>
+            	<li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>Owner: <?=$business->email?></p></li>
             </ul>
 
             <hr>
@@ -33,3 +35,10 @@
 	</div>
 
 </div>
+<?php 
+}
+else
+{
+  redirect(base_url().'index.php/Login_controller/index?error=please login first');
+} 
+?>

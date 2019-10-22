@@ -12,6 +12,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 	public function index()
 	{
+		if (isset($_GET['error']))
+		{
+			$vars['error']=$_GET['error'];
+			view_loader_with_data('Login_View',$vars);
+		}
 		view_loader('Login_View');
 	}
 	
@@ -30,14 +35,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				
 				if ($password == $this->input->post('pass'))
 				{
-					if ($data->role_id == 1)
-					{
-						$this->session->set_userdata('customer',$email);
-					}
-					if($data->role_id == 2)
-					{
-						$this->session->set_userdata('business',$email);
-					}
+					// if ($data->role_id == 1)
+					// {
+					// 	$this->session->set_userdata('customer',$email);
+					// }
+					// if($data->role_id == 2)
+					// {
+					// 	$this->session->set_userdata('business',$email);
+					// }
+
+					$this->session->set_userdata('email',$email);
 
 					view_loader_with_data('layouts/index',$data);
 					
@@ -60,6 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	{
 		$data = ['id', 'email'];
         $this->session->unset_userdata($data);
+        $this->session->sess_destroy();
 
         view_loader('Login_view');
 	}

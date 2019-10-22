@@ -28,4 +28,12 @@ class Booking extends CI_Model
 		return $insert_id;
 	}
 
+	public function get_free_restaurant_tables($arrival_time,$leaving_time)
+	{
+		// $query=$this->db->select('*')->from($this->table)->where('status','0')->get();
+		// return $query->result();
+		$query=$this->db->select('*')->from($this->table)->where("(arrival_time > $leaving_time) OR (leaving_time < $arrival_time)")->get();
+		return $query->result();
+	}
+
 }

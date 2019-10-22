@@ -16,11 +16,11 @@ TODO
 ###add button book table on  restaurant card view
 ###book table button does not have to be form submit, change it to link
 
-make date of booking a datepicker input
+###make date of booking a datepicker input
 
-change arival time to time picker input (date picker with format just a time)
+###change arival time to time picker input (date picker with format just a time)
 
-get restaurant table uses status:0, make use of allocation hour
+###get restaurant table uses status:0, make use of allocation hour
     - hour and meridium select box
 
 after selcting arrival time
